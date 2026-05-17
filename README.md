@@ -52,9 +52,32 @@ Not: Komuttaki /dev/video1 parametresi varsayılan kamera indeksinize göre (/de
 
 Bash
 
-# Docker'ın yerel ekran sunucusuna erişimine izin verin
-sudo xhost +local:docker > /dev/null 2>&1
+# Docker'ı yükle (eğer yüklü değilse) 
 
+ # 1. Önce sistem paketlerini güncelle
+    sudo apt update
+
+# 2. Gerekli yardımcı araçları kur
+    sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+
+# 3. Docker'ın resmi GPG anahtarını ekle
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+# 4. Docker reposunu sistemine tanıt
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.dist.d/docker.list > /dev/null
+
+# 5. Listeyi tekrar güncelle ve asıl Docker paketlerini kur
+    sudo apt update
+    sudo apt install -y docker-ce docker-ce-cli containerd.io
+
+
+
+# Docker'ın yerel ekran sunucusuna erişimine izin verin
+    sudo xhost +local:docker > /dev/null 2>&1
+
+
+    
+# VE SON OLARAK PROJEYİ ÇALIŞTIRIN
 # Konteyneri çevre birimi izinleriyle birlikte başlatın
     sudo docker run -it --rm \
     --device=/dev/video1 \

@@ -1,0 +1,9 @@
+opencv-python
+mediapipe
+numpy
+
+GNU-LİNUX SİSTEMLERİ İÇİN GEREKEN SİSTEM PAKETLERİ 
+- xdotool 
+- scrot    
+- playerctl
+- pactl    

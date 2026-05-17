@@ -1,6 +1,10 @@
 # VisionTech
 Kamera Tabanlı Uzaktan Kontrol Sistemi
 
+
+             // BU PROJE PYTHON 3.10 VERSİON İLE ÇALIŞIYOR
+
+
 Bu proje; bilgisayar kamerasını kullanarak el hareketleriyle işletim sistemini, fareyi ve medya oynatıcılarını uzaktan yönetmeyi sağlayan bir bilgisayarlı görü (Computer Vision) uygulamasıdır. Proje, popüler kültürdeki fütüristik el hareketleriyle kontrol mekanizmalarını temel alarak, bilgisayarı dokunmadan yönetebileceğimiz işlevsel bir araç sunmayı amaçlar.
 
 Uygulama Linux (X11) ortamı için optimize edilmiş olup tamamen açık kaynaklı ve yeni özellikler eklenmeye müsait bir mimariye sahiptir.

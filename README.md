@@ -50,7 +50,6 @@ Docker konteynerinin X11 ekran sunucusuna, kameraya ve ses sürücülerine eriş
 
     Not: Komuttaki /dev/video1 parametresi varsayılan kamera indeksinize göre (/dev/video0 vb.) değişiklik gösterebilir. Ayrıca $HOME/Desktop/goruntuisleme_python dizinini kendi proje yolunuza göre güncelleyiniz.
 
-'''
 Bash
 
 # Docker'ın yerel ekran sunucusuna erişimine izin verin
